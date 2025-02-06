@@ -20,7 +20,6 @@ public class Funcionario extends Pessoa {
     }
 
     public Funcionario aumentarSalario(BigDecimal percentual) {
-        // Retorna um novo Funcionario com o salário atualizado
         BigDecimal novoSalario = salario.add(salario.multiply(percentual));
         return new Funcionario(getNome(), getDataNascimento(), novoSalario, funcao);
     }
