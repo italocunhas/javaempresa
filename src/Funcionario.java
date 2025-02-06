@@ -1,4 +1,5 @@
 import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Funcionario extends Pessoa {
@@ -26,7 +27,6 @@ public class Funcionario extends Pessoa {
 
     @Override
     public String toString() {
-        return super.toString() + " - " + funcao + " - " +
-                salario.setScale(2, java.math.RoundingMode.HALF_EVEN).toString().replace('.', ',');
+        return super.toString() + " - " + funcao + " - " + salario.setScale(2, RoundingMode.HALF_EVEN).toString().replace('.', ',');
     }
 }

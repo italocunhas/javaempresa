@@ -1,4 +1,5 @@
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 public class Pessoa {
     private final String nome;
@@ -19,6 +20,6 @@ public class Pessoa {
 
     @Override
     public String toString() {
-        return nome + " - " + dataNascimento.format(java.time.format.DateTimeFormatter.ofPattern("dd/MM/yyyy"));
+        return nome + " - " + dataNascimento.format(DateTimeFormatter.ofPattern("dd/MM/yyyy"));
     }
 }
