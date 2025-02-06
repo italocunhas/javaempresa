@@ -3,7 +3,7 @@ import java.math.RoundingMode;
 import java.time.LocalDate;
 
 public class Funcionario extends Pessoa {
-    private final BigDecimal salario;
+    private BigDecimal salario;
     private final String funcao;
 
     public Funcionario(String nome, LocalDate dataNascimento, BigDecimal salario, String funcao) {
@@ -20,9 +20,8 @@ public class Funcionario extends Pessoa {
         return funcao;
     }
 
-    public Funcionario aumentarSalario(BigDecimal percentual) {
-        BigDecimal novoSalario = salario.add(salario.multiply(percentual));
-        return new Funcionario(getNome(), getDataNascimento(), novoSalario, funcao);
+    public void aumentarSalario(BigDecimal percentual) {
+        this.salario = salario.add(salario.multiply(percentual));
     }
 
     @Override
